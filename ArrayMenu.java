@@ -81,6 +81,23 @@ public class ArrayMenu {
         }
 
 
+        public static double[] findAverageDiff(int[] arr) {
+            int x = 0;
+            for(int i = 0; i < arr.length; i++) {
+                x += arr[i];
+            }
+        
+            int av = x / arr.length;
+        
+            double[] diff = new double[arr.length];
+        
+            for(int i = 0; i < arr.length; i++) {
+                diff[i] = arr[i] - av;
+            }
+        
+            return diff;
+        }
 
 }
+
 
