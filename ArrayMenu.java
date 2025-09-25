@@ -1,6 +1,3 @@
-
-public class ArrayMenu {
-
 import java.util.Scanner;
 import java.util.Random;
 public class ArrayMenu {
@@ -10,7 +7,8 @@ public class ArrayMenu {
 
             System.out.println("Enter an array size: ");
             int size = sc.nextInt();
-            int array[] = createArray(size);
+            sc.nextLine();
+            int[] array = createArray(size);
 
             System.out.println("Here is the array: ");
             for (int n : array){
@@ -25,12 +23,13 @@ public class ArrayMenu {
             while(true){
             System.out.println("Select the option you want[1-4]:");
             int selection = sc.nextInt();
+            sc.nextLine();
             switch(selection) {
                 case 1:
-                    findMin(array);
+                    System.out.println(findMin(array));;
                     return;
                 case 2:
-                    findMax(array);
+                    System.out.println(findMax(array));;
                     return;
                 case 3:
                     findAverageDiff(array);
@@ -43,7 +42,7 @@ public class ArrayMenu {
             }
             }
             
-            
+           
         }
 
         public static int[] createArray(int size){
@@ -57,6 +56,31 @@ public class ArrayMenu {
 
         }
 
+        public static int findMin(int[] arr){
+            int min_num = arr[0];
+
+            for(int i = 0; i < arr.length; i++){
+                if(arr[i] < min_num){
+                    min_num = arr[i];
+                }
+            }
+
+            return min_num;
+        }
+
+        public static int findMax(int[] arr){
+            int max_num = arr[0];
+            
+            for(int i = 0; i < arr.length; i++){
+                if(arr[i] > max_num){
+                    max_num = arr[i];
+                }
+            }
+
+            return max_num;
+        }
+
 
 
 }
+
