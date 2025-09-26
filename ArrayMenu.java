@@ -83,7 +83,7 @@ public class ArrayMenu {
         return max_num;
     }
 
-    public static double[] findAverageDiff(int[] arr) {
+    public static void findAverageDiff(int[] arr) {
         int x = 0;
         for (int i = 0; i < arr.length; i++) {
             x += arr[i];
@@ -97,16 +97,16 @@ public class ArrayMenu {
             diff[i] = arr[i] - av;
         }
 
-        return diff;
+        System.out.println(Arrays.toString(diff));
     }
 
-    public static String findOddEvenSums(int[] arr) {
+    public static void findOddEvenSums(int[] arr) {
         int oddSums = 0;
         int evenSums = 0;
         String sums = "";
 
         for (int i : arr) {
-            if (arr[i] % 2 == 0) {
+            if (i % 2 == 0) {
                 evenSums += i;
             }
             oddSums += i;
@@ -114,8 +114,9 @@ public class ArrayMenu {
 
         sums = "" + "Odd Sums: " + oddSums + "\nEven Sums: " + evenSums;
 
-        return sums;
+        System.out.println(sums);
     }
 
 }
+
 
