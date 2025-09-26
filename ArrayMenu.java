@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -83,6 +83,23 @@ public class ArrayMenu {
         return max_num;
     }
 
+    public static double[] findAverageDiff(int[] arr) {
+        int x = 0;
+        for (int i = 0; i < arr.length; i++) {
+            x += arr[i];
+        }
+
+        double av = (double) x / arr.length;
+
+        double[] diff = new double[arr.length];
+
+        for (int i = 0; i < arr.length; i++) {
+            diff[i] = arr[i] - av;
+        }
+
+        return diff;
+    }
+
     public static String findOddEvenSums(int[] arr) {
         int oddSums = 0;
         int evenSums = 0;
@@ -101,3 +118,4 @@ public class ArrayMenu {
     }
 
 }
+
