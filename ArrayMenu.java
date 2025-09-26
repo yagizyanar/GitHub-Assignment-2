@@ -28,11 +28,11 @@ public class ArrayMenu {
             sc.nextLine();
             switch (selection) {
                 case 1:
-                    System.out.println(findMin(array));
+                    System.out.println("Minimum integer is: "+findMin(array));
                     ;
                     return;
                 case 2:
-                    System.out.println(findMax(array));
+                    System.out.println("Maximum integer is: "+findMax(array));
                     ;
                     return;
                 case 3:
@@ -118,5 +118,6 @@ public class ArrayMenu {
     }
 
 }
+
 
 
